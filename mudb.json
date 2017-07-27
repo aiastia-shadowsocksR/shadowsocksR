@@ -1,2 +1,75 @@
 [
+    {
+        "d": 0,
+        "enable": 1,
+        "method": "aes-256-cfb",
+        "obfs": "tls1.2_ticket_auth",
+        "passwd": "waezVnk0w6XaQ",
+        "port": 443,
+        "protocol": "auth_aes128_sha1",
+        "protocol_param": "#",
+        "transfer_enable": 1125899906842624,
+        "u": 0,
+        "user": "443"
+    },
+    {
+        "d": 74599726,
+        "enable": 1,
+        "method": "aes-256-cfb",
+        "obfs": "tls1.2_ticket_auth",
+        "passwd": "123123123",
+        "port": 13421,
+        "protocol": "auth_aes128_md5",
+        "transfer_enable": 150000000000,
+        "u": 354101,
+        "user": "13421"
+    },
+    {
+        "d": 0,
+        "enable": 1,
+        "method": "aes-256-cfb",
+        "obfs": "tls1.2_ticket_auth",
+        "passwd": "q4Gv9ImqX",
+        "port": 9379,
+        "protocol": "auth_aes128_md5",
+        "transfer_enable": 150000000000,
+        "u": 0,
+        "user": "9379"
+    },
+    {
+        "d": 1628898196,
+        "enable": 1,
+        "method": "aes-256-cfb",
+        "obfs": "tls1.2_ticket_auth_compatible",
+        "passwd": "q4Gv9ImqX",
+        "port": 9345,
+        "protocol": "auth_sha1_v4_compatible",
+        "transfer_enable": 150000000000,
+        "u": 113717458,
+        "user": "9345"
+    },
+    {
+        "d": 0,
+        "enable": 1,
+        "method": "none",
+        "obfs": "tls1.2_ticket_auth_compatible",
+        "passwd": "q4Gv9ImqX",
+        "port": 4433,
+        "protocol": "auth_chain_a",
+        "transfer_enable": 5000000000,
+        "u": 0,
+        "user": "4433"
+    },
+    {
+        "d": 0,
+        "enable": 1,
+        "method": "aes-256-ctr",
+        "obfs": "tls1.2_ticket_auth",
+        "passwd": "4fGiKeY",
+        "port": 10000,
+        "protocol": "auth_aes128_md5",
+        "transfer_enable": 3000000000,
+        "u": 0,
+        "user": "10000"
+    }
 ]
