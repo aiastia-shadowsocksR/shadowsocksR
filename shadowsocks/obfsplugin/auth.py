@@ -47,11 +47,16 @@ def create_auth_aes128_sha1(method):
     return auth_aes128_sha1(method, hashlib.sha1)
 
 obfs_map = {
-        'auth_sha1_v4': (create_auth_sha1_v4,),
-        'auth_sha1_v4_compatible': (create_auth_sha1_v4,),
-        'auth_aes128_md5': (create_auth_aes128_md5,),
-        'auth_aes128_sha1': (create_auth_aes128_sha1,),
-}
+          'auth_sha1_v4': (create_auth_sha1_v4,),
+          'auth_sha1_v4_compatible': (create_auth_sha1_v4,),
+          'auth_aes128_md5': (create_auth_aes128_md5,),
+          'auth_aes128_md5_compatible': (create_auth_aes128_md5,),
+          'auth_aes128_sha1': (create_auth_aes128_sha1,),
+          'auth_aes128_sha1_compatible': (create_auth_aes128_sha1,),
+		  
+          
+  }
+
 
 def match_begin(str1, str2):
     if len(str1) >= len(str2):
