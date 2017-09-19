@@ -40,10 +40,11 @@ from shadowsocks.common import to_bytes, to_str, ord, chr
 def create_auth_chain_a(method):
     return auth_chain_a(method)
 
-
 obfs_map = {
         'auth_chain_a': (create_auth_chain_a,),
+		'auth_chain_a_compatible': (create_auth_chain_a,),
 }
+
 
 class xorshift128plus(object):
     max_int = (1 << 64) - 1
