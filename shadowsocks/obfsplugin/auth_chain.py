@@ -58,13 +58,13 @@ def create_auth_chain_d(method):
 
 obfs_map = {
     'auth_chain_a': (create_auth_chain_a,),
-	'auth_chain_a_compatible': (create_auth_chain_a,),
+    'auth_chain_a_compatible': (create_auth_chain_a,),
     'auth_chain_b': (create_auth_chain_b,),
-	'auth_chain_b_compatible': (create_auth_chain_a,),
+    'auth_chain_b_compatible': (create_auth_chain_a,),
     'auth_chain_c': (create_auth_chain_c,),
-	'auth_chain_c_compatible': (create_auth_chain_a,),
+    'auth_chain_c_compatible': (create_auth_chain_a,),
     'auth_chain_d': (create_auth_chain_d,),
-	'auth_chain_d_compatible': (create_auth_chain_a,),
+    'auth_chain_d_compatible': (create_auth_chain_a,),
 }
 
 
