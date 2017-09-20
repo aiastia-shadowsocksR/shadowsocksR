@@ -24,7 +24,7 @@ RUN mkdir -p $WORK && \
     wget -qO- --no-check-certificate https://github.com/shadowsocksR-private/shadowsocksR/archive/abcd.tar.gz | tar -xzf - -C $WORK
 
 
-WORKDIR $WORK/shadowsocksr-$BRANCH/shadowsocks
+WORKDIR $WORK/shadowsocksR-$BRANCH/shadowsocks
 
 
 EXPOSE $SERVER_PORT
