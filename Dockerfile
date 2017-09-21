@@ -14,7 +14,7 @@ ENV DNS_ADDR_2      8.8.4.4
 ARG BRANCH=test
 ARG WORK=~
 
-export PATH=$PATH:
+
 
 RUN apk --no-cache add python \
     libsodium \
