@@ -24,12 +24,9 @@ RUN mkdir -p $WORK && \
     wget -qO- --no-check-certificate https://github.com/shadowsocksR-private/shadowsocksR/archive/$BRANCH.tar.gz | tar -xzf - -C $WORK
 
 
-#WORKDIR $WORK/shadowsocksr-$BRANCH/shadowsocks
+WORKDIR $WORK/shadowsocksR-$BRANCH/shadowsocks
 
-RUN cd .. && \
-cd .. && \
-cd .. && \
-cd /$WORK/shadowsocksR-$BRANCH/shadowsocks
+
 
 EXPOSE $SERVER_PORT
 CMD ["python","server.py", "-c /tmp/ssr/1.json"]
