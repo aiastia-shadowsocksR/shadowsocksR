@@ -14,6 +14,7 @@ ENV DNS_ADDR_2      8.8.4.4
 ARG BRANCH=test
 ARG WORK=~
 
+export PATH=$PATH:
 
 RUN apk --no-cache add python \
     libsodium \
@@ -22,12 +23,11 @@ RUN apk --no-cache add python \
 
 
 RUN mkdir -p $WORK && \
-    git clone -b abcd https://github.com/shadowsocksR-private/shadowsocksR.git
+    git clone -b abcd https://github.com/shadowsocksR-private/shadowsocksR.git && cd /shadowsocksR/shadowsocks
 
 
 WORKDIR $WORK/shadowsocksR/shadowsocks
 
-RUN cd $WORK/shadowsocksR/shadowsocks
 
 EXPOSE $SERVER_PORT
 CMD ["python","server.py", "-c /tmp/ssr/1.json"]
