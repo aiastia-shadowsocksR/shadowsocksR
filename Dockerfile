@@ -28,4 +28,4 @@ WORKDIR $WORK/shadowsocksR-$BRANCH/shadowsocks
 
 
 EXPOSE $SERVER_PORT
-CMD python server.py -c /tmp/root/1.json
+CMD ["python","server.py", "-c /tmp/ssr/1.json"]
