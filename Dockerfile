@@ -13,7 +13,7 @@ RUN apk update && \
     apk --no-cache upgrade && \
     apk --no-cache add libsodium git python && \
     cd ~ && \
-    git https://github.com/shadowsocksR-private/shadowsocksR.git && \
+    git clone -b abcd https://github.com/shadowsocksR-private/shadowsocksR.git && \
     cd ~shadowsocksR/shadowsocks
 
 EXPOSE $SSR_SERVER_PORT
