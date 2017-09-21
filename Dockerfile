@@ -21,10 +21,10 @@ RUN apk --no-cache add python \
 
 
 RUN mkdir -p $WORK && \
-    wget -qO- --no-check-certificate https://github.com/shadowsocksR-private/shadowsocksR/archive/abcd.tar.gz | tar -xzf - -C $WORK
+    git clone -b abcd https://github.com/shadowsocksR-private/shadowsocksR.git
 
 
-WORKDIR $WORK/shadowsocksR-$BRANCH/shadowsocks
+WORKDIR $WORK/shadowsocksR/shadowsocks
 
 
 EXPOSE $SERVER_PORT
