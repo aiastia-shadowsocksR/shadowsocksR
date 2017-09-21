@@ -27,7 +27,7 @@ RUN mkdir -p $WORK && \
 
 WORKDIR $WORK/shadowsocksR/shadowsocks
 
-RUN cd $WORK
+RUN cd $WORK/shadowsocksR/shadowsocks
 
 EXPOSE $SERVER_PORT
 CMD ["python","server.py", "-c /tmp/ssr/1.json"]
