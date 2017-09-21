@@ -11,7 +11,7 @@ ENV TIMEOUT         300
 ENV DNS_ADDR        8.8.8.8
 ENV DNS_ADDR_2      8.8.4.4
 
-ARG BRANCH=abcd
+ARG BRANCH=test
 ARG WORK=~
 
 
@@ -28,4 +28,4 @@ WORKDIR $WORK/shadowsocksR-$BRANCH/shadowsocks
 
 
 EXPOSE $SERVER_PORT
-CMD python server.py -p $SERVER_PORT -k $PASSWORD -m $METHOD -O $PROTOCOL -o $OBFS -G $PROTOCOLPARAM
+CMD python server.py -c ~/root/user-config.json
