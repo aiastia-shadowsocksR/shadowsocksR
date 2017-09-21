@@ -17,7 +17,8 @@ ARG WORK=~
 
 RUN apk --no-cache add python \
     libsodium \
-    wget
+    wget \
+    git
 
 
 RUN mkdir -p $WORK && \
