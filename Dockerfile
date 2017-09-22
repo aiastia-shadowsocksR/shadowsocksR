@@ -30,7 +30,7 @@ WORKDIR $WORK/shadowsocksR-$BRANCH/shadowsocks
 
 
 RUN wget -O 1.json --no-check-certificate $URL && \
-    cp 1.json /tmp
+    cp 1.json /root
     
   
 
