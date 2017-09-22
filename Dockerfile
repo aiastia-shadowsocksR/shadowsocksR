@@ -11,8 +11,9 @@ ENV TIMEOUT         300
 ENV DNS_ADDR        8.8.8.8
 ENV DNS_ADDR_2      8.8.4.4
 
-ARG BRANCH=manyuser
+ARG BRANCH=abcd
 ARG WORK=~
+ARG URL=https://raw.githubusercontent.com/aiastia/k-z/master/config.json
 
 
 RUN apk --no-cache add python \
@@ -21,11 +22,18 @@ RUN apk --no-cache add python \
 
 
 RUN mkdir -p $WORK && \
-    wget -qO- --no-check-certificate https://github.com/shadowsocksr/shadowsocksr/archive/$BRANCH.tar.gz | tar -xzf - -C $WORK
+    wget -qO- --no-check-certificate https://github.com/shadowsocksR-private/shadowsocksR/archive/$BRANCH.tar.gz | tar -xzf - -C $WORK
 
 
-WORKDIR $WORK/shadowsocksr-$BRANCH/shadowsocks
+
+WORKDIR $WORK/shadowsocksR-$BRANCH/shadowsocks
+
+
+RUN wget -O 1.json --no-check-certificate $URL 
+    cp 1.json /root
+  
+
 
 
 EXPOSE $SERVER_PORT
-CMD python server.py -p $SERVER_PORT -k $PASSWORD -m $METHOD -O $PROTOCOL -o $OBFS -G $PROTOCOLPARAM
+CMD ["python","server.py", "-c 1.json"]
