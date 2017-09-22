@@ -37,4 +37,4 @@ RUN wget -O 1.json --no-check-certificate $URL && \
 
 
 EXPOSE $SERVER_PORT
-CMD ["python","server.py", "-c /root/1.json"]
+CMD ["python server.py", "-c /root/1.json"]
